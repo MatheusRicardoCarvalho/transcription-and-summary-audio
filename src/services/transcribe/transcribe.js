@@ -19,29 +19,3 @@ export async function transcribe(audioPath) {
   }
   
 }
-
-function handleGroqError(error) {
-  if (error.status) {
-    const { status, message } = error;
-    console.log("status do erro: "+status+"\nData: "+data)
-
-    const statusMessages = {
-      400: "Bad Request",
-      401: "Unauthorized",
-      404: "Not Found",
-      422: "Unprocessable Entity",
-      429: "Too Many Requests",
-      500: "Internal Server Error",
-      502: "Bad Gateway",
-      503: "Service Unavailable"
-    };
-
-    const errorMessage = statusMessages[status] 
-      ? `${status} ${statusMessages[status]}: ${message}` 
-      : `Unknown Error (${status}): ${message}`;
-    
-    throw new Error(errorMessage);
-  }
-
-  throw new Error(`Network or other error vai: ${error}`);
-}
