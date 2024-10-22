@@ -8,7 +8,7 @@ document.getElementById('audioForm').addEventListener('submit', async function(e
     }
 
     console.log('tipo do áudio: '+audioFile.type)
-    const validTypes = ['audio/mp3', 'audio/wav', 'audio/m4a', 'audio/flac', 'audio/ogg', 'audio/webm'];
+    const validTypes = ['audio/mp3', 'audio/wav', 'audio/mpeg','audio/m4a', 'audio/flac', 'audio/ogg', 'audio/webm'];
     if (!validTypes.includes(audioFile.type)) {
       alert('Tipo de arquivo inválido. Por favor, envie um arquivo de áudio (.mp3, .wav, .m4a, .flac, .ogg, .webm).');
       return;
@@ -43,7 +43,7 @@ document.getElementById('audioForm').addEventListener('submit', async function(e
       document.getElementById('audioTranscription').textContent = data.transcription || 'Transcrição não disponível.';
     } catch (error) {
       console.error('Erro:', error);
-      alert('Ocorreu um erro ao enviar o arquivo. Por favor, tente novamente.');
+      alert('Ocorreu um erro: '+error.status+' ao enviar o arquivo. Por favor, tente novamente.');
     }
   });
   
