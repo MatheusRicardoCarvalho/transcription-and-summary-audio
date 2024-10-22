@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload de Áudio</title>
+</head>
+<body>
+  <h2>Envie um arquivo de áudio (.mp3 ou .wav)</h2>
+  <form id="audioForm">
+    <input type="file" id="audioFile" accept=".mp3, .wav" required>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <h3>Resumo do Áudio:</h3>
+  <div id="audioSummary"></div>
+
+  <h3>Transcrição do Áudio:</h3>
+  <pre id="audioTranscription"></pre>
+
+  <script src="script.js"></script>
+</body>
+</html>
