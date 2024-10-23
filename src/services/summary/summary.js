@@ -8,7 +8,7 @@ export async function summary(content) {
     const response = chatCompletion.choices[0]?.message?.content || ""
     const processingTime = chatCompletion.usage.total_time
     console.log(response);
-    return {response, processingTime}
+    return response
   } catch(err){
     throw err
   }

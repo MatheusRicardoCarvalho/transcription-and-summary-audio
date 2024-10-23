@@ -6,7 +6,7 @@ const storage = multer.diskStorage({
   filename: (req, file, cb) => {
     const ext = file.mimetype.replace("audio/", '.')
     console.log(ext)
-    const extension = path.extname(file.originalname) || '.mp3';
+    const extension = path.extname(file.originalname) || ext;
     const newFilename = `${Date.now()}${extension}`;
     cb(null, newFilename);
   }

@@ -8,13 +8,7 @@ document.getElementById('audioForm').addEventListener('submit', async function(e
     }
 
     console.log('tipo do áudio: '+audioFile.type)
-    let newFile = audioFile;
-    if (audioFile.type === 'audio/mpeg' && !audioFile.name.endsWith('.mpeg')) {
-      console.log("AUDIO SEM EXTENSÃO")
-        const newFileName = audioFile.name.replace(/\.[^/.]+$/, "") + '.mpeg'; // Troca ou adiciona a extensão para `.mpeg`
-        newFile = new File([audioFile], newFileName, { type: 'audio/mpeg' });
-        console.log('Arquivo renomeado para: ' + newFile.name);
-    }
+    
     const formData = new FormData();
     formData.append('audio', audioFile);
     
