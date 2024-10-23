@@ -6,15 +6,17 @@ Este projeto é uma aplicação web que permite o upload de arquivos de áudio, 
 
 A estrutura do projeto é organizada em módulos, facilitando a manutenção e a escalabilidade. Abaixo estão os principais diretórios e suas funções:
 
+```
 /src
-/controllers // Controladores que gerenciam as requisições e respostas
-/middlewares // Middlewares para validação e tratamento de erros
-/routes // Definição das rotas da API
-/services // Serviços que contêm a lógica de negócios
-/functions // Funções auxiliares para transcrição e resumo
-/uploads // Diretório para armazenar arquivos de áudio enviados
-/view // Arquivos HTML e JavaScript para a interface do usuário
-index.js // Ponto de entrada da aplicação
+├── /controllers          # Controladores que gerenciam as requisições e respostas
+├── /middlewares          # Middlewares para validação e tratamento de erros
+├── /routes               # Definição das rotas da API
+├── /services             # Serviços que contêm a lógica de negócios
+├── /functions            # Funções auxiliares para transcrição e resumo
+├── /uploads              # Diretório para armazenar arquivos de áudio enviados
+├── /view                 # Arquivos HTML e JavaScript para a interface do usuário
+└── index.js              # Ponto de entrada da aplicação
+```
 
 ### Principais Módulos
 
