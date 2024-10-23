@@ -6,6 +6,16 @@ Este projeto é uma aplicação web que permite o upload de arquivos de áudio, 
 
 A estrutura do projeto é organizada em módulos, facilitando a manutenção e a escalabilidade. Abaixo estão os principais diretórios e suas funções:
 
+/src
+/controllers // Controladores que gerenciam as requisições e respostas
+/middlewares // Middlewares para validação e tratamento de erros
+/routes // Definição das rotas da API
+/services // Serviços que contêm a lógica de negócios
+/functions // Funções auxiliares para transcrição e resumo
+/uploads // Diretório para armazenar arquivos de áudio enviados
+/view // Arquivos HTML e JavaScript para a interface do usuário
+index.js // Ponto de entrada da aplicação
+
 ### Principais Módulos
 
 - **Controllers**: Gerenciam a lógica de controle das rotas, como o `audioController.js`, que lida com o upload de áudio e a chamada para os serviços de transcrição e resumo.
@@ -13,8 +23,6 @@ A estrutura do projeto é organizada em módulos, facilitando a manutenção e a
 - **Middlewares**: Contêm funções que são executadas durante o ciclo de vida da requisição, como `validationMiddleware.js` para validar o tipo de arquivo enviado e `errorHandler.js` para tratar erros.
 
 - **Services**: Implementam a lógica de negócios, como `transcribe.js` e `summary.js`, que interagem com a API da Groq para realizar a transcrição e o resumo do áudio.
-
-- **Functions**: Contêm funções auxiliares que podem ser reutilizadas em diferentes partes do código.
 
 ## Dependências
 
