@@ -1,7 +1,6 @@
 import { GroqError } from "groq-sdk";
 
 export const errorHandler = (err, req, res, next) => {
-  console.log('Erro mano:\n' +JSON.stringify(err));
   res.status(err.status).json({ error: handleGroqError(err) });
 };
 

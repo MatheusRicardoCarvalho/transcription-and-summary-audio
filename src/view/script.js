@@ -25,8 +25,13 @@ document.getElementById('audioForm').addEventListener('submit', async function(e
   
       const data = await response.json();
   
-      document.getElementById('audioSummary').textContent = data.summary || 'Resumo não disponível.';
-      document.getElementById('audioTranscription').textContent = data.transcription || 'Transcrição não disponível.';
+      // Exibir resumo e transcrição retornados pelo backend
+      const summaryMarkdown = data.summary || 'Resumo não disponível.';
+      const transcriptionMarkdown = data.transcription || 'Transcrição não disponível.';
+
+      // Converter Markdown para HTML
+      document.getElementById('audioSummary').innerHTML = marked.parse(summaryMarkdown);
+      document.getElementById('audioTranscription').innerHTML = marked.parse(transcriptionMarkdown);
     } catch (error) {
       console.error('Erro:', error);
       alert('Ocorreu um erro: ' + error.message + ' Por favor, tente novamente.');

@@ -7,11 +7,13 @@ export const handleAudioUpload = async (req, res, next) => {
     const audioPath = req.file.path;
 
     const transcription = await transcribe(audioPath);
-    const summaryResult = await summary(transcription);
+    const {summaryResult, processingTime, tokens} = await summary(transcription);
 
     res.status(200).json({
-      transcription: transcription,
-      summary: summaryResult
+      transcription,
+      summary: summaryResult,
+      processingTime,
+      tokens
     });
   } catch (error) {
     next(error)
