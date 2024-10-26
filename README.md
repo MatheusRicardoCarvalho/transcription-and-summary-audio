@@ -56,7 +56,7 @@ Para instalar e executar o projeto utilize o node 20.18 ou a última versão LTS
 
 4. **Execute o projeto**:
    ```bash
-   npm start
+   npm run start
    ```
 
 5. **Acesse a aplicação**:
