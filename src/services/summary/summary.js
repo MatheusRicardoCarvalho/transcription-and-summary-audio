@@ -6,10 +6,10 @@ export async function summary(content) {
   try{
     const chatCompletion = await getGroqChatCompletion(content);
     const response = chatCompletion.choices[0]?.message?.content || ""
-    const processingTime = chatCompletion.usage.total_time
-    const tokens = chatCompletion.usage.total_tokens
-    console.log(response);
-    return {summaryResult: response, processingTime, tokens}
+    const summaryProcessingTime = chatCompletion.usage.total_time
+    const summaryTokens = chatCompletion.usage.total_tokens
+    const summaryModel = chatCompletion.model
+    return {summaryResult: response, summaryProcessingTime, summaryTokens,summaryModel}
   } catch(err){
     throw err
   }

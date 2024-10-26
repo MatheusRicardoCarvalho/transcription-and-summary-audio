@@ -1,17 +1,17 @@
 # Projeto de transcrição e resumo
 
-Este projeto é uma aplicação web que permite o upload de arquivos de áudio, realiza a transcrição e gera um resumo do conteúdo transcrito utilizando a API da Groq. O sistema foi desenvolvido utilizando Node.js e Express.
+Este projeto é uma aplicação web que permite o upload de arquivos de áudio, realiza a transcrição e gera um resumo do conteúdo transcrito utilizando a API da Groq. O sistema foi desenvolvido utilizando Node.js, Express para criar e gerenciar o servidor e Multer para lidar com os arquivos de áudio.
 
 ## Estrutura do Projeto
 
-A estrutura do projeto é organizada em módulos, facilitando a manutenção e a escalabilidade. Abaixo estão os principais diretórios e suas funções:
+A estrutura do projeto é organizada em módulos. Abaixo estão os principais diretórios e suas funções:
 
 ```
 /src
 ├── /controllers          # Controladores que gerenciam as requisições e respostas
 ├── /middlewares          # Middlewares para validação e tratamento de erros
 ├── /routes               # Definição das rotas da API
-├── /services             # Serviços que contêm a lógica de negócios e funções auxiliares para transcrição e resumo
+├── /services             # Serviços que contêm funções auxiliares para transcrição e resumo
 ├── /uploads              # Diretório para armazenar arquivos de áudio enviados
 ├── /view                 # Arquivos HTML e JavaScript para a interface do usuário
 └── index.js              # Ponto de entrada da aplicação
@@ -32,7 +32,6 @@ O projeto utiliza as seguintes dependências:
 - `express`: Framework web para Node.js.
 - `groq-sdk`: SDK para interagir com a API da Groq.
 - `multer`: Middleware para manipulação de uploads de arquivos.
-- `axios`: Biblioteca para fazer requisições HTTP.
 
 ## Instalação
 

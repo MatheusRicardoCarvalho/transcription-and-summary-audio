@@ -1,8 +1,7 @@
 import { Router } from "express"
 import * as url from 'url'
-import multer from 'multer'
 import path from 'path';
-import { handleAudioUpload } from '../controllers/audioController.js';
+import { audioController } from '../controllers/audioController.js';
 import { upload } from '../services/uploadService/uploadService.js'
 import { validateAudioFile } from '../middlewares/validationMiddleware.js'
 import { errorHandler } from "../middlewares/errorHandler.js";
@@ -15,8 +14,6 @@ routes.get('/', (request, response) => {
   response.sendFile(path.join(__dirname, '../view/index.html'))
 })
 
-routes.post('/summary', upload.single('audio'), validateAudioFile, handleAudioUpload)
-
-routes.use(errorHandler)
+routes.post('/summary', upload.single('audio'), validateAudioFile, audioController, errorHandler)
 
 export default routes

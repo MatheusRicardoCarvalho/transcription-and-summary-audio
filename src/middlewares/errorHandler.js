@@ -1,7 +1,6 @@
-import { GroqError } from "groq-sdk";
-
 export const errorHandler = (err, req, res, next) => {
-  res.status(err.status).json({ error: handleGroqError(err) });
+  if(err.status) res.status(err.status).json({ error: handleGroqError(err) });
+  else res.status(400).json({err})
 };
 
 function handleGroqError(error) {
