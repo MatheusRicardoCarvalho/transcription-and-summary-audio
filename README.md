@@ -12,7 +12,6 @@ A estrutura do projeto é organizada em módulos. Abaixo estão os principais di
 ├── /middlewares          # Middlewares para validação e tratamento de erros
 ├── /routes               # Definição das rotas da API
 ├── /services             # Serviços que contêm funções auxiliares para transcrição e resumo
-├── /uploads              # Diretório para armazenar arquivos de áudio enviados
 ├── /view                 # Arquivos HTML e JavaScript para a interface do usuário
 └── index.js              # Ponto de entrada da aplicação
 ```
@@ -35,7 +34,7 @@ O projeto utiliza as seguintes dependências:
 
 ## Instalação
 
-Para instalar e executar o projeto utilize o node 20.18 ou a última versão LTS, feito isso siga os passos abaixo:
+Para instalar e executar o projeto utilize o `node 20.18 a cima ou a última versão LTS`, feito isso siga os passos abaixo:
 
 1. **Clone o repositório**:
    ```bash
