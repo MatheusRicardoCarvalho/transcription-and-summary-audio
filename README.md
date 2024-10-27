@@ -1,6 +1,6 @@
 # Projeto de transcrição e resumo
 
-Este projeto é uma aplicação web que permite o upload de arquivos de áudio, realiza a transcrição e gera um resumo do conteúdo transcrito utilizando a API da Groq. O sistema foi desenvolvido utilizando Node.js, Express para criar e gerenciar o servidor e Multer para lidar com os arquivos de áudio.
+Este projeto é uma aplicação web que permite o upload de arquivos de áudio, realiza a transcrição e gera um resumo do conteúdo transcrito utilizando a API da Groq. O sistema foi desenvolvido utilizando Node.js, Express para criar e gerenciar o servidor, Multer para lidar com os arquivos de áudio e a biblioteca mark que é importada via CDN no front para transformar o markdown do modelo LLM em html.
 
 ## Estrutura do Projeto
 
